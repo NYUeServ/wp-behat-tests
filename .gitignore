@@ -1,0 +1,15 @@
+*~
+.DS_Store
+.svn
+.cvs
+*.bak
+*.swp
+.idea
+Thumbs.db
+
+# Tests
+!build/**/README.md
+build/*
+bin/
+vendor/
+composer.lock
