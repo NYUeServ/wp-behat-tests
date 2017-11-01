@@ -13,3 +13,4 @@ build/*
 bin/
 vendor/
 composer.lock
+behat.yml
