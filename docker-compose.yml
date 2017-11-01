@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+    behat:
+        image: neelakansha85/behat:3.1.0-alpine
+        external_links:
+            - hub
+            - chrome
+        volumes:
+            - ./:/root/tests
+        environment:
+            - PROFILE
+            - OPTIONAL_ARGS
+        entrypoint: sh -c 'sleep 8 && behat --profile=$$PROFILE $$OPTIONAL_ARGS --config=behat.yml'
