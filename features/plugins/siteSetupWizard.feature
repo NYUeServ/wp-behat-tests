@@ -13,7 +13,8 @@ Feature: As a user I should be able to create new site using Site Setup Wizard P
     Given I am logged in as "localbehat"
     Then I should visit "create"
     Then I should not see "You must first log in to create new site."
-    Then I click "div.ssw-xtra-block > a" if visible
+    Then I click "#ssw-steps > div > div > div.ssw-xtra-block > a" if visible
+    Then I wait for "#ssw-steps > div > div > fieldset > div.ssw-selection > input.ssw-start-btn" element
 
     # Step1
     Then I press "Teaching & Learning"
