@@ -14,3 +14,4 @@ bin/
 vendor/
 composer.lock
 behat.yml
+nohup.out
