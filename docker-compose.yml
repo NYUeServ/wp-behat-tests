@@ -11,4 +11,5 @@ services:
         environment:
             - PROFILE
             - OPTIONAL_ARGS
-        entrypoint: sh -c 'sleep 8 && behat --profile=$$PROFILE $$OPTIONAL_ARGS --config=behat.yml'
+            - USERS
+        entrypoint: useradd $$USERS && su -c 'sleep 8 && behat --profile=$$PROFILE $$OPTIONAL_ARGS --config=behat.yml' - $$USER

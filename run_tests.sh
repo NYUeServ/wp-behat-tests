@@ -76,10 +76,10 @@ runTests() {
 
     set +e
     if [ -z ${OPTIONAL_ARGS} ] || [ ${OPTIONAL_ARGS} == 'null' ]; then
-        docker-compose run -e PROFILE="${PROFILE}" behat
+        docker-compose run -e PROFILE="${PROFILE}" -e USERS="${whoami}" behat
         status=$?
     else 
-        docker-compose run -e PROFILE="${PROFILE}" -e OPTIONAL_ARGS="${OPTIONAL_ARGS}" behat
+        docker-compose run -e PROFILE="${PROFILE}" -e OPTIONAL_ARGS="${OPTIONAL_ARGS}" -e USERS="${whoami}" behat
         status=$?
     fi
     set -e
