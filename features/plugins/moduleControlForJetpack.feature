@@ -3,7 +3,7 @@ Feature: As a network admin I verify if module control for jetpack is installed,
 
 Scenario: Module control for Jetpack is installed, network activated and check functionality
 	Given I am logged in as "localsuperbehat"
-	Then "Module Control for Jetpack" plugin is installed
+	#Then "Module Control for Jetpack" plugin is installed
 	Then "Module Control for Jetpack" plugin is network activated
 	Then I should visit "wp-admin/network/settings.php"
 	Then I should see "Jetpack Module Control"

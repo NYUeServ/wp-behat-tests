@@ -3,7 +3,7 @@ Feature: As a super admin, I verify if NYU Stream Embed is installed, network ac
 
 Scenario: Verify if NYU Stream plugin is Installed and Network Activated
 	Given I am logged in as "localsuperbehat"
-	Then "NYU Stream Embed" plugin is installed
+	#Then "NYU Stream Embed" plugin is installed
 	Then "NYU Stream Embed" plugin is network activated
 
 	# NYU Stream Embed is visible on Sidebar and NYU Configuration is set

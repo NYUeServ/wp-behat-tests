@@ -3,7 +3,7 @@ Feature: As a network admin, I verify if Avatars for Multisite is installed, net
 
 Scenario: Verify if Avatars for Multisite is installed and network activated
 	Given I am logged in as "localsuperbehat"
-	Then "Avatars For Multisite" plugin is installed
+	#Then "Avatars For Multisite" plugin is installed
 	Then "Avatars For Multisite" plugin is network activated
 	Then I log out
 

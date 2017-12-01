@@ -4,7 +4,7 @@ Feature: As a user I should be able to create new site using newBlogTemplate Plu
   @javascript
   Scenario: Verify New Blog Templates is installed and Network Activated
     Given I am logged in as "localsuperbehat"
-    Then "New Blog Templates" plugin is installed
+    #Then "New Blog Templates" plugin is installed
     Then "New Blog Templates" plugin is network activated
     Then I log out
 
