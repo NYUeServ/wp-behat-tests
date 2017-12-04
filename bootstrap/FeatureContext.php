@@ -525,7 +525,7 @@ class FeatureContext extends MinkContext {
 		$field       = $this->fixStepArgument( $field );
 		$pluginName = $this->fixStepArgument( $pluginName );
 		$this->getSession()->getPage()->fillField( $field, $pluginName );
-		sleep( 2 );
+		sleep( 3 );
 		$this->getSession()->wait( 5000, 'jQuery.active === 0' );
 		$selector    = $this->getSession()->getPage()->findById( 'the-list' );
 		$pluginInfo = $selector->getText();
