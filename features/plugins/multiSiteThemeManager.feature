@@ -3,8 +3,8 @@ Feature: As a super admin I should verify if Multisite Theme Manager Plugin is i
 
   Scenario: Verify if Multisite Theme Manager is Installed and Network Activated
     Given I am logged in as "localsuperbehat"
-    Then "Multisite Theme Manager" plugin is installed
-    Then "Multisite Theme Manager" plugin is network activated
+    #Then "Multisite Theme Manager" plugin is installed
+    Then "Multisite Theme Manager" plugin is installed and network activated
     Then I log out
 
   Scenario: Multisite Theme Manager is visible on Sidebar and NYU configuration is set

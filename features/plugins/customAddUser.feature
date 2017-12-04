@@ -3,8 +3,8 @@ Feature: As a super admin I should verify if Custom Add User Plugin is network a
 
   Scenario: Verify if Custom Add User is Installed and Network Activated
     Given I am logged in as "localsuperbehat"
-    Then "Custom Add User" plugin is installed
-    Then "Custom Add User" plugin is network activated
+    #Then "Custom Add User" plugin is installed
+    Then "Custom Add User" plugin is installed and network activated
     Then I log out
 
   Scenario: Verify whether the Add New User form loads correctly and user gets added.

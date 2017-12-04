@@ -537,9 +537,9 @@ class FeatureContext extends MinkContext {
 	/**
 	 * Wordpress: Verifies if plugin is network activated from Network Admin Plugins page
 	 *
-	 * @Then /^"([^"]*)" plugin is network activated$/
+	 * @Then /^"([^"]*)" plugin is installed and network activated$/
 	 */
-	public function pluginIsNetworkActivated( $pluginName ) {
+	public function pluginIsInstalledAndNetworkActivated( $pluginName ) {
 		$this->pluginIsInstalled( $pluginName );
 		$pluginactivationfield = $this->getSession()->getPage()->find( 'css', 'td[class="plugin-title column-primary"]' );
 		$pluginInfo            = $pluginactivationfield->getText();

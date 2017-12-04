@@ -3,8 +3,8 @@ Feature: As an admin I verify if easyFancyBox is installed, network activated an
 
 Scenario: Verify if Easy FancyBox is installed and network activated
 	Given I am logged in as "localsuperbehat"
-	Then "Easy FancyBox" plugin is installed
-	Then "Easy FancyBox" plugin is network activated
+	#Then "Easy FancyBox" plugin is installed
+	Then "Easy FancyBox" plugin is installed and network activated
 	Then I log out
 
 Scenario: Check NYU configuration

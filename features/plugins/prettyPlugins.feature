@@ -3,8 +3,8 @@ Feature: As a super admin, I verify if Pretty Plugins is installed, NYU configur
 
 Scenario: Verify if Pretty Plugins is Installed and Network Activated
 	Given I am logged in as "localsuperbehat"
-	Then "Pretty Plugins" plugin is installed
-	Then "Pretty Plugins" plugin is network activated
+	#Then "Pretty Plugins" plugin is installed
+	Then "Pretty Plugins" plugin is installed and network activated
 	Then I log out
 
 Scenario: Pretty Plugins is visible on Sidebar and NYU Configuration is set
