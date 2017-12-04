@@ -10,7 +10,7 @@ Feature: Topsites work
   Scenario: hr-nyubenefitsguide resolves
     Given I am logged in as "localsuperbehat"
     Then I should visit "hr-nyubenefitsguide"
-    Then I should see "Benefits Overview Guide"
+    Then I should see "Benefits Guides"
     Then I log out
 
   Scenario: itsecurity resolves

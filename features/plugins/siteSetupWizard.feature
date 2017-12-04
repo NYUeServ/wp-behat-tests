@@ -4,8 +4,8 @@ Feature: As a user I should be able to create new site using Site Setup Wizard P
   @verifyNetworkSettings
   Scenario: Verify Site Setup Wizard Plugin is installed and Network Activated
     Given I am logged in as "localsuperbehat"
-    Then "Site Setup Wizard" plugin is installed
-    Then "Site Setup Wizard" plugin is network activated
+    #Then "Site Setup Wizard" plugin is installed
+    Then "Site Setup Wizard" plugin is installed and network activated
     Then I log out
 
   @createSite

@@ -3,8 +3,8 @@ Feature: As a super admin, I verify whether Default Theme plugin is installed, n
 
 Scenario: Verify whether Default Theme Plugin is installed and Network Activated
   Given I am logged in as "localsuperbehat"
-  Then "Default Theme" plugin is installed
-  Then "Default Theme" plugin is network activated
+  #Then "Default Theme" plugin is installed
+  Then "Default Theme" plugin is installed and network activated
 
   # Check NYU Configuration (Network Admin Settings)
   Then I should visit "wp-admin/network/settings.php"

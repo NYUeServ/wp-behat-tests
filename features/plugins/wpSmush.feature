@@ -3,8 +3,8 @@ Feature: As a super admin I should verify if WP Smush Plugin is network activate
 
 Scenario: WP Smush is installed, network activated, visible on Sidebar and verify NYU configuration
   Given I am logged in as "localsuperbehat"
-  Then "WP Smush Pro" plugin is installed
-  Then "WP Smush Pro" plugin is network activated
+  #Then "WP Smush Pro" plugin is installed
+  Then "WP Smush Pro" plugin is installed and network activated
 
   # Check network settings
   Then I should visit "wp-admin/network/settings.php"
