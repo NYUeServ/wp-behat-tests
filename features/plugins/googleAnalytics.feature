@@ -1,4 +1,4 @@
-@javascript @plugins @networkactivated @testgoogle
+@javascript @plugins @networkactivated 
 Feature: As a super admin, I verify if Google Analytics is installed, visible on sidebar and NYU configuration is set.
 
 Scenario: Verify if Google Analytics is Installed and Network Activated.
