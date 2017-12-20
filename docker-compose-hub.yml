@@ -2,7 +2,7 @@ version: "3"
 
 services:
     hub:
-        image: selenium/hub:3.5.2
+        image: selenium/hub:3.8.1
         ports:
             - "4444:4444"
         volumes:
@@ -11,7 +11,7 @@ services:
             - GRID_BROWSER_TIMEOUT=60
             - GRID_TIMEOUT=60
     chrome:
-        image: selenium/node-chrome:3.5.2
+        image: selenium/node-chrome:3.8.1
         links:
             - hub
         environment:
