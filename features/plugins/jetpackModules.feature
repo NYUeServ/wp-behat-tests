@@ -13,7 +13,6 @@ Scenario: Verify the functionality of all Jetpack Modules
 	# Image Gallery
 	Then I click "#gallery-3"
 	# Carousel viewing window
-	Then I should visit "testbehat/jetpack-test-page/#jp-carousel-68"
 	Then "body > div.jp-carousel-wrap.jp-carousel-transitions > div.jp-carousel > div.jp-carousel-slide.selected > img" element exists
 	# Image Description
 	Then "body > div.jp-carousel-wrap.jp-carousel-transitions > div.jp-carousel-info" element exists
