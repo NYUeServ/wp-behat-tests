@@ -245,6 +245,7 @@ class FeatureContext extends MinkContext {
 	 * @Then /^"([^"]*)" element exists$/
 	 */
 	public function elementExists( $element ) {
+		$this->iWaitForElement($element);
 		$selector = $this->getSession()->getPage()->find( 'css', $element );
 		if ( null === $selector ) {
 			throw new \Exception( sprintf( 'Cannot find the element ' . $element ) );
