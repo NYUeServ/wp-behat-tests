@@ -80,7 +80,8 @@ Scenario: Verify the functionality of all Jetpack Modules
 	Then I should visit "testbehat/wp-admin/customize.php?return=%2Ftestbehat%2Fwp-admin%2Fadmin.php%3Fpage%3Djetpack_modules"
 	Then "#accordion-section-custom_css > h3" element has value "Additional CSS"
 	Then I click "#accordion-section-custom_css > h3"
-	Then I should visit "testbehat/wp-admin/customize.php?return=%2Ftestbehat%2Fwp-admin%2Fadmin.php%3Fpage%3Djetpack_modules"
+	# Visiting the wrong page to verify the existence of CodeMirror Scroll
+	#Then I should visit "testbehat/wp-admin/customize.php?return=%2Ftestbehat%2Fwp-admin%2Fadmin.php%3Fpage%3Djetpack_modules"
 	Then "#customize-control-custom_css > div.CodeMirror.cm-s-default.CodeMirror-wrap > div.CodeMirror-scroll" element exists
 	Then I should visit "/testbehat/"
 
@@ -90,15 +91,16 @@ Scenario: Verify the functionality of all Jetpack Modules
 	Then I should visit "/testbehat/wp-admin/widgets.php"
 	Then "#widget-3_authors-__i__ > div.widget-top > div.widget-title.ui-draggable-handle > h3" element has value "Authors (Jetpack)"
 	Then "#widget-7_widget_contact_info-__i__ > div.widget-top > div.widget-title.ui-draggable-handle > h3" element has value "Contact Info & Map (Jetpack)"
-	Then "#widget-10_jetpack_display_posts_widget-__i__ > div.widget-top > div.widget-title.ui-draggable-handle > h3" element has value "Display WordPress Posts (Jetpack)"
-	Then "#widget-11_eu_cookie_law_widget-__i__ > div.widget-top > div.widget-title.ui-draggable-handle > h3" element has value "EU Cookie Law Banner (Jetpack)"
-	Then "#widget-12_facebook-likebox-__i__ > div.widget-top > div.widget-title.ui-draggable-handle > h3" element has value "Facebook Page Plugin (Jetpack)"
-	Then "#widget-13_flickr-__i__ > div.widget-top > div.widget-title.ui-draggable-handle > h3" element has value "Flickr (Jetpack)"
-	Then "#widget-14_gallery-__i__ > div.widget-top > div.widget-title.ui-draggable-handle > h3" element has value "Gallery (Jetpack)"
-	Then "#widget-15_wpcom-goodreads-__i__ > div.widget-top > div.widget-title.ui-draggable-handle > h3" element has value "Goodreads (Jetpack)"
-	Then "#widget-16_googleplus-badge-__i__ > div.widget-top > div.widget-title.ui-draggable-handle > h3" element has value "Google+ Badge (Jetpack)"
-	Then "#widget-17_google_translate_widget-__i__ > div.widget-top > div.widget-title.ui-draggable-handle > h3" element has value "Google Translate (Jetpack)"
-	Then "#widget-18_grofile-__i__ > div.widget-top > div.widget-title.ui-draggable-handle > h3" element has value "Gravatar Profile (Jetpack)"
+	Then "#widget-9_jetpack_display_posts_widget-__i__ > div.widget-top > div.widget-title.ui-draggable-handle > h3" element has value "Display WordPress Posts (Jetpack)"
+	Then "#widget-10_eu_cookie_law_widget-__i__ > div.widget-top > div.widget-title.ui-draggable-handle > h3" element has value "EU Cookie Law Banner (Jetpack)"
+	Then "#widget-11_facebook-likebox-__i__ > div.widget-top > div.widget-title.ui-draggable-handle > h3" element has value "Facebook Page Plugin (Jetpack)"
+	Then "#widget-12_flickr-__i__ > div.widget-top > div.widget-title.ui-draggable-handle > h3" element has value "Flickr (Jetpack)"
+	# Widget discontinued
+	#Then "#widget-14_gallery-__i__ > div.widget-top > div.widget-title.ui-draggable-handle > h3" element has value "Gallery (Jetpack)"
+	Then "#widget-14_wpcom-goodreads-__i__ > div.widget-top > div.widget-title.ui-draggable-handle > h3" element has value "Goodreads (Jetpack)"
+	Then "#widget-15_googleplus-badge-__i__ > div.widget-top > div.widget-title.ui-draggable-handle > h3" element has value "Google+ Badge (Jetpack)"
+	Then "#widget-16_google_translate_widget-__i__ > div.widget-top > div.widget-title.ui-draggable-handle > h3" element has value "Google Translate (Jetpack)"
+	Then "#widget-17_grofile-__i__ > div.widget-top > div.widget-title.ui-draggable-handle > h3" element has value "Gravatar Profile (Jetpack)"
 	# Then "#widget-20_image-__i__ > div.widget-top > div.widget-title.ui-draggable-handle > h3" element has value "Image (Jetpack)"
 	# Then "#widget-21_internet_defense_league_widget-__i__ > div.widget-top > div.widget-title.ui-draggable-handle > h3" element has value "Internet Defense League (Jetpack)"
  	# TODO: Verify the existence of widgets after Mailchimp. The ordering is defferent on wpdev, wp and wpqa.
@@ -123,7 +125,8 @@ Scenario: Verify the functionality of all Jetpack Modules
 	Then "#linkedin > span" element exists
 	Then "#reddit > span" element exists
 	Then "#twitter > span" element exists
-	Then "#press-this > span" element exists
+	# Service Discontinued in the new jetapck update
+	#Then "#press-this > span" element exists
 	Then "#google-plus-1 > span" element exists
 	Then "#tumblr > span" element exists
 	Then "#pinterest > span" element exists
