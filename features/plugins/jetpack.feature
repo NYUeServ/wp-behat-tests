@@ -77,13 +77,13 @@ Feature: As a site admin I should be able to activate services and features prov
     Then "div.jp-masthead__nav > span > a" element has value "Dashboard"
     Then "div.jp-masthead__nav > span > a.is-primary" element has value "Settings"
     Then I should visit "testbehat/wp-admin/admin.php?page=jetpack#/writing"
-    Then "span.dops-section-nav-tab__text > span" element has value "Writing"
+    Then "li.is-selected > a > span" element has value "Writing"
     Then I should visit "testbehat/wp-admin/admin.php?page=jetpack#/sharing"
-    Then "li.is-selected > a > span > span" element has value "Sharing"
+    Then "li.is-selected > a > span " element has value "Sharing"
     Then I should visit "testbehat/wp-admin/admin.php?page=jetpack#/discussion"
-    Then "li.is-selected > a > span > span" element has value "Discussion"
+    Then "li.is-selected > a > span" element has value "Discussion"
     Then I should visit "testbehat/wp-admin/admin.php?page=jetpack#/traffic"
-    Then "li.is-selected > a > span > span" element has value "Traffic"
+    Then "li.is-selected > a > span" element has value "Traffic"
     Then "div.jp-masthead > div > div > a" element exists
     Then "div.dops-card.jp-support-card__happiness" element exists
 
