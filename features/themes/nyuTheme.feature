@@ -1,4 +1,4 @@
-@javascript @themes 
+@javascript @themes
 Feature: As a user I should be able to activate NYU Blogs Test Theme.
 
 Scenario: Activate NYU Theme, verify the characteristics and reset to default theme
