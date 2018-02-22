@@ -8,7 +8,6 @@ Scenario: Activate NYU Theme, verify the characteristics and reset to default th
   # Check elements of NYU Theme
   Then I should visit "testbehat/"
   # NYU Logo
-  Then "div.nyuTorchLogo" element exists
   Then "div.nyuLogo" element exists
   # Menu bar
   Then "#slide-menu-left" element exists
