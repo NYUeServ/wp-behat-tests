@@ -29,7 +29,9 @@ Scenario: Pretty Plugins is visible on Sidebar and NYU Configuration is set
 Scenario: Verify whether plugins are classified into categories
 	Given I am logged in as "localbehat"
  	Then I should visit "testbehat/wp-admin/admin.php?page=pretty-plugins.php"
- 	Then I should see "CHOOSE CATEGORY TO DISPLAY:"
+	# Due to the plugin update, this text no longer exists. A div tab containing all the categories (Default and Pretty plugins) exists now.
+    # Then I should see "CHOOSE CATEGORY TO DISPLAY:"
+	Then "#plugin-categories-list" element exists
  	# Pretty Plugins Categories
  	Then "#plugin-categories-list > li > a" element has value "All"
  	Then "#plugin-categories-list > li > a.category1" element has value "Admin Tools"
@@ -39,7 +41,8 @@ Scenario: Verify whether plugins are classified into categories
  	Then "#plugin-categories-list > li > a.category4" element has value "Other"
  	Then "#plugin-categories-list > li > a.category6" element has value "Social Media"
  	# Default categories
- 	Then I should see "SORT BY:"
+	# "SORT BY" text was present in the older version of the plugin. These categories are in line with the above categories.
+ 	#Then I should see "SORT BY:"
  	Then "#plugin-status-list > li > a.all" element has value "All"
  	Then "#plugin-status-list > li > a.active" element has value "Active"
  	Then "#plugin-status-list > li > a.inactive" element has value "Inactive"
