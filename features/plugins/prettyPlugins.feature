@@ -15,7 +15,7 @@ Scenario: Pretty Plugins is visible on Sidebar and NYU Configuration is set
 	Then I should see "Pretty Plugins Settings"
 	Then I should see "General Settings"
 	Then "wmd_prettyplugins_options[setup_mode]" select element has selected value "False"
-	Then "wmd_prettyplugins_options[theme]" select element has selected value "Quick Sand"
+	Then "wmd_prettyplugins_options[theme]" select element has selected value "Material"
 	Then I should see "Theme and Appearance Settings"
 	Then "wmd_prettyplugins_options[plugins_links]" select element has selected value "Plugin custom URL"
 	Then "wmd_prettyplugins_options[plugins_auto_screenshots]" select element has selected value "False"
