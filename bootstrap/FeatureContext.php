@@ -799,7 +799,7 @@ class FeatureContext extends MinkContext {
 	 */
 	public function iActivateThemeUsingMultisiteThemeManager( $themeName ) {
 		$fieldCssSelector    = 'theme-search-input';
-		$activateCssSelector = '#wpbody-content > div.wrap > div.theme-browser.rendered > div > div > div.theme-actions > a.button.button-primary.activate';
+		$activateCssSelector ='#wpbody-content > div.wrap > div.theme-browser.rendered > div > div > div.theme-id-container > div > a.button.button-primary.activate';
 		$field               = $this->fixStepArgument( $fieldCssSelector );
 		$themeName          = $this->fixStepArgument( $themeName );
 		sleep(2);
