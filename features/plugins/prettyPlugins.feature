@@ -30,7 +30,7 @@ Scenario: Verify whether plugins are classified into categories
 	Given I am logged in as "localbehat"
  	Then I should visit "testbehat/wp-admin/admin.php?page=pretty-plugins.php"
 	# Due to the plugin update, this text no longer exists. A div tab containing all the categories (Default and Pretty plugins) exists now.
-    # Then I should see "CHOOSE CATEGORY TO DISPLAY:"
+        # Then I should see "CHOOSE CATEGORY TO DISPLAY:"
 	Then "#plugin-categories-list" element exists
  	# Pretty Plugins Categories
  	Then "#plugin-categories-list > li > a" element has value "All"
