@@ -11,6 +11,8 @@ Feature: As an site admin I should be able to load the Themes page of the site
     Then "div.theme-browser" element exists
     Then "div.theme.active" element exists
     Then "div.theme.active > div.theme-screenshot" element exists
-    Then "div.theme.active > h3.theme-name" element exists
-    Then "div.theme.active > div.theme-actions" element exists
+    # Theme-name container
+    Then "div.theme.active > div.theme-id-container > h3.theme-name" element exists
+    # Theme actions (Activate, Preview and Customize)
+    Then "div.theme.active > div.theme-id-container > div.theme-actions" element exists
     Then I log out
