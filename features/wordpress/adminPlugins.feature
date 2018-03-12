@@ -1,5 +1,5 @@
 # features/wordpress/adminPlugins.feature
-@wordpress
+@wordpress 
 Feature: As a admin I should be able to load the Admin Plugins page
 
 #  @javascript
@@ -10,9 +10,10 @@ Feature: As a admin I should be able to load the Admin Plugins page
     Then "div#current-theme" element exists
     Then "#plugin-categories-list" element exists
     Then "div#availableplugins" element exists
-    Then "div.available-theme.available-plugin" element exists
+    # css selector of boxes containing plugins
+    Then "div.available-plugin" element exists
     Then "div.action-links" element exists
     # Activate - Deactivate button under plugin name
-    Then "div.button-primary.button-large.material-button > a.activate-deactivate" element exists
+    Then "div.action-links>a.button-primary.button-large.material-button" element exists
     Then "input#theme-search-input" element exists
     Then I log out
