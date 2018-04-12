@@ -35,7 +35,7 @@ Feature: Topsites work
   Scenario: productionlab resolves
     Given I am logged in as "localsuperbehat"
     Then I should visit "productionlab"
-    Then I should see "Producing the Next Class of Content Creators"
+    Then I should see "Producing the Next Generation of Storytellers"
     Then I log out
 
 

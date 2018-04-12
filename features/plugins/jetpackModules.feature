@@ -4,9 +4,10 @@ Feature: Verify the functionality of all Jetpack Modules
 Scenario: Verify the functionality of all Jetpack Modules
 	Given I am logged in as "localbehat"
 
+	# TODO: Run this step after Beautiful Math becomes available
 	# Module: BeautifulMath
-	Then I should visit "/testbehat/jetpack-test-page/"
-	Then "#main > article > div > p > img" element exists
+	#Then I should visit "/testbehat/jetpack-test-page/"
+	#Then "#main > article > div > p > img" element exists
 
 	# Module: Carousel
 	Then I should visit "testbehat/carousel-test-page/"
