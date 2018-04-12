@@ -1,4 +1,4 @@
-@javascript @plugins
+@javascript @plugins @jj
 Feature: As a site admin I should be able to activate services and features provided by Jetpack
 
   Scenario: Verify if Jetpack by WordPress.com is installed and available for All Users
@@ -30,7 +30,7 @@ Feature: As a site admin I should be able to activate services and features prov
     Then "select#bulk-action-selector-top" element has value "Bulk Action"
 
     # Code to check if all modules are available
-    Then "tbody#the-list" element has value "Beautiful Math"
+    #Then "tbody#the-list" element has value "Beautiful Math"
     Then "tbody#the-list" element has value "Carousel"
     Then "tbody#the-list" element has value "Contact Form"
     Then "tbody#the-list" element has value "Custom CSS"
@@ -47,7 +47,10 @@ Feature: As a site admin I should be able to activate services and features prov
     Then "tbody#the-list" element has value "Widget Visibility"
     
     # Code to check boxes in all the elements
-    Then "tr#latex.jetpack-module > th.check-column" element exists
+    # Carousel Module for checkboxes 
+    Then "#carousel > th" element exists
+    # Beautiful Math Module deactivated/Removed -> Restore step after it is installed
+    #Then "tr#latex.jetpack-module > th.check-column" element exists
     Then "tr#carousel.jetpack-module > th.check-column" element exists
     Then "tr#contact-form.jetpack-module > th.check-column" element exists
     Then "tr#custom-css.jetpack-module > th.check-column" element exists
