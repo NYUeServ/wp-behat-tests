@@ -1,4 +1,4 @@
-@javascript @plugins @jj
+@javascript @plugins
 Feature: As a site admin I should be able to activate services and features provided by Jetpack
 
   Scenario: Verify if Jetpack by WordPress.com is installed and available for All Users
@@ -47,7 +47,7 @@ Feature: As a site admin I should be able to activate services and features prov
     Then "tbody#the-list" element has value "Widget Visibility"
     
     # Code to check boxes in all the elements
-    # Carousel Module for checkboxes 
+    # Carousel Module for checkboxes
     Then "#carousel > th" element exists
     # Beautiful Math Module deactivated/Removed -> Restore step after it is installed
     #Then "tr#latex.jetpack-module > th.check-column" element exists
