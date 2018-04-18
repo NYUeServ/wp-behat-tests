@@ -86,25 +86,26 @@ Feature: As a site admin I should be able to activate services and features prov
     # TODO: Discussion module under investigation (Restore #87, #88 after resolution)
     #Then I should visit "testbehat/wp-admin/admin.php?page=jetpack#/discussion"
     #Then "li.is-selected > a > span" element has value "Discussion"
-    Then I should visit "testbehat/wp-admin/admin.php?page=jetpack#/traffic"
-    Then "li.is-selected > a > span" element has value "Traffic"
+    # TODO: Traffic Module under investigation (Restore #90, #91 after resolution)
+    #Then I should visit "testbehat/wp-admin/admin.php?page=jetpack#/traffic"
+    #Then "li.is-selected > a > span" element has value "Traffic"
     Then "div.jp-masthead > div > div > a" element exists
     Then "div.dops-card.jp-support-card__happiness" element exists
 
     # Load Jetpack Settings Nav Page correctly
 
     # Code Block for Checking Toolbar, Composing, Media, Custom Content Types, Theme Enhancements, Infinite Scroll
-    Then I should visit "testbehat/wp-admin/admin.php?page=jetpack#/discussion"
-    Then "div#jp-plugin-container" element has value "Comments"
-    Then "div#jp-plugin-container" element has value "Enable pop-up business cards over commenter"
-    Then "div#jp-plugin-container" element has value "Enable Markdown use for comments"
+    #Then I should visit "testbehat/wp-admin/admin.php?page=jetpack#/discussion"
+    #Then "div#jp-plugin-container" element has value "Comments"
+    #Then "div#jp-plugin-container" element has value "Enable pop-up business cards over commenter"
+    #Then "div#jp-plugin-container" element has value "Enable Markdown use for comments"
 
     # Code Block for Checking Toolbar, Composing, Media, Custom Content Types, Theme Enhancements, Infinite Scroll
-    Then I should visit "testbehat/wp-admin/admin.php?page=jetpack#/traffic"
-    Then "div#jp-plugin-container" element has value "Sitemaps"
-    Then "div#jp-plugin-container" element has value "Generate XML sitemaps"
-    Then "div#jp-plugin-container" element has value "Site verification"
-    Then "div#jp-plugin-container" element has value "Note that verifying your site with these services is not necessary"
+    #Then I should visit "testbehat/wp-admin/admin.php?page=jetpack#/traffic"
+    #Then "div#jp-plugin-container" element has value "Sitemaps"
+    #Then "div#jp-plugin-container" element has value "Generate XML sitemaps"
+    #Then "div#jp-plugin-container" element has value "Site verification"
+    #Then "div#jp-plugin-container" element has value "Note that verifying your site with these services is not necessary"
 
     # Code Block for Checking Toolbar, Composing, Media, Custom Content Types, Theme Enhancements, Infinite Scroll
     Then I should visit "testbehat/wp-admin/admin.php?page=jetpack#/writing"
