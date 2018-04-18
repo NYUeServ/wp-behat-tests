@@ -150,19 +150,21 @@ Scenario: Verify the functionality of all Jetpack Modules
 	Then I should visit "testbehat/slideshow-test-page/"
 	Then "#gallery-57-3-slideshow" element exists
 
+	#TODO : Traffic Module under investigation (Restore #155 - #158 after resolution)
 	# Module: SiteMaps
-	Then I should visit "/testbehat/wp-admin/admin.php?page=jetpack#/traffic"
-	Then I should see "Sitemaps"
-	Then I should see "Generate XML sitemaps"
-	Then I should see "Reading settings"
+	#Then I should visit "/testbehat/wp-admin/admin.php?page=jetpack#/traffic"
+	#Then I should see "Sitemaps"
+	#Then I should see "Generate XML sitemaps"
+	#Then I should see "Reading settings"
 
+	#TODO: Traffic Module under investigation (Restore #162 - #167 after resolution)
 	# Module: Site Verification
-	Then I should visit "/testbehat/wp-admin/admin.php?page=jetpack#/traffic"
-	Then I should see "Site verification"
-	Then "div.jp-form-settings-group > div > fieldset > label > span" element has value "Google"
-	Then I should see "Bing"
-	Then I should see "Pinterest"
-	Then I should see "Yandex"
+	#Then I should visit "/testbehat/wp-admin/admin.php?page=jetpack#/traffic"
+	#Then I should see "Site verification"
+	#Then "div.jp-form-settings-group > div > fieldset > label > span" element has value "Google"
+	#Then I should see "Bing"
+	#Then I should see "Pinterest"
+	#Then I should see "Yandex"
 
 	# Module: Widget Visibility
 	# Then I should visit "/testbehat/wp-admin/widgets.php"
