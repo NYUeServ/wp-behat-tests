@@ -55,8 +55,8 @@ Feature: As a user I should be able to create new site using Site Setup Wizard P
 
     # Check Privacy setting
     Then I should visit "testssw/wp-admin/options-reading.php"
-    # Theme Settings - Genesis
-    Then the "genesis-settings[update]" checkbox should be checked
+    # Theme Settings - Genesis - This theme was removed
+    #Then the "genesis-settings[update]" checkbox should be checked
 
     # Check Site Title and site admin email
     Then I should visit "testssw/wp-admin/options-general.php"
