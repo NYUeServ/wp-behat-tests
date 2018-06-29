@@ -8,9 +8,9 @@ Scenario: WP Smush is installed, network activated, visible on Sidebar and verif
 
   # Check network settings
   Then I should visit "wp-admin/network/settings.php"
-  Then I should see "WP Smush"
-  Then I should visit "wp-admin/network/settings.php?page=wp-smush"
-  Then I should see "WP SMUSH PRO"
+  Then I should see "Smush Pro"
+  Then I should visit "wp-admin/network/settings.php?page=smush"
+  Then I should see "SMUSH"
   Then I should see "SETTINGS"
   #Then I should see "Enable Network wide settings"
   Then I should see "Use network settings for all the sub-sites."
@@ -41,8 +41,7 @@ Scenario: WP Smush visible in Media Sidebar on testbehat and verify settings on 
   # Media > WP Smush
   Then I should see "WP Smush"
   Then I should visit "/testbehat/wp-admin/upload.php?page=wp-smush-bulk"
-  #Then I should see "Automatic smushing is enabled. Newly uploaded images will be automagically compressed."
-  Then I should see "Automatic smushing is disabled. Newly uploaded images will need to be manually smushed."
+  Then I should see "Automatic smushing is enabled. Newly uploaded images will be automagically compressed."
   Then "#wp-smush-stats-box > div > h3" element has value "STATS"
   # RE_CHECK IMAGES
   Then "#wp-smush-stats-box > div.wp-smush-container-header.box-title > div > button" element exists

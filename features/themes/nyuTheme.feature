@@ -4,7 +4,7 @@ Feature: As a user I should be able to activate NYU Blogs Test Theme.
 Scenario: Activate NYU Theme, verify the characteristics and reset to default theme
   Given I am logged in as "localbehat"
   Then I should visit "testbehat/"
-  Then I activate theme "NYU Blogs test"
+  Then I activate theme "NYU Standard"
   # Check elements of NYU Theme
   Then I should visit "testbehat/"
   # NYU Logo
