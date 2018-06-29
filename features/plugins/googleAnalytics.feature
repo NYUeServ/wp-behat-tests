@@ -13,8 +13,8 @@ Scenario: Verify if Google Analytics is Installed and Network Activated.
   Then I should see "Basic Network Tracking Settings"
   # Admin Pages Tracking
   Then the "track_admin" field should contain "1"
-  #Domain Mapping
-  Then the "domain_mapping" field should contain "0"
+  #Domain Mapping - this has been removed by the Plugin Developer in version 3.1.6 
+  #Then the "domain_mapping" field should contain "0"
   Then I should see "Advanced Network Tracking Settings"
   #IP Anonymization
   Then the "anonymize_ip" field should contain "0"
