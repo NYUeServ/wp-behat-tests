@@ -7,9 +7,9 @@ Scenario: Smush Pro is installed, network activated, visible on Sidebar and veri
   Then "Smush Pro" plugin is installed and network activated
 
   # Check network settings
-  Then I should visit "wp-admin/network/settings.php"
-  Then I should see "Smush Pro"
-  Then I should visit "wp-admin/network/settings.php?page=smush"
+  #Then I should visit "wp-admin/network/settings.php"
+  #Then I should see "Smush Pro"
+  Then I should visit "wp-admin/network/admin.php?page=smush"
   Then I should see "SMUSH"
   Then I should see "SETTINGS"
   #Then I should see "Enable Network wide settings"
