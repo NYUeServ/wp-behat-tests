@@ -8,9 +8,9 @@ Scenario: WP Smush is installed, network activated, visible on Sidebar and verif
 
   # Check network settings
   Then I should visit "wp-admin/network/settings.php"
-  Then I should see "WP Smush"
-  Then I should visit "wp-admin/network/settings.php?page=wp-smush"
-  Then I should see "WP SMUSH PRO"
+  Then I should see "Smush Pro"
+  Then I should visit "wp-admin/network/settings.php?page=smush"
+  Then I should see "SMUSH"
   Then I should see "SETTINGS"
   #Then I should see "Enable Network wide settings"
   Then I should see "Use network settings for all the sub-sites."
