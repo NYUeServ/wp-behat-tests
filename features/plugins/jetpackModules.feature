@@ -92,8 +92,8 @@ Scenario: Verify the functionality of all Jetpack Modules
 	Then I should visit "/testbehat/wp-admin/widgets.php"
 	Then "#widget-3_authors-__i__ > div.widget-top > div.widget-title.ui-draggable-handle > h3" element has value "Authors (Jetpack)"
 	Then "#widget-7_widget_contact_info-__i__ > div.widget-top > div.widget-title.ui-draggable-handle > h3" element has value "Contact Info & Map (Jetpack)"
-	Then "#widget-9_jetpack_display_posts_widget-__i__ > div.widget-top > div.widget-title.ui-draggable-handle > h3" element has value "Display WordPress Posts (Jetpack)"
-	Then "#widget-10_eu_cookie_law_widget-__i__ > div.widget-top > div.widget-title.ui-draggable-handle > h3" element has value "EU Cookie Law Banner (Jetpack)"
+	Then "#widget-10_jetpack_display_posts_widget-__i__ > div.widget-top > div.widget-title.ui-draggable-handle > h3" element has value "Display WordPress Posts (Jetpack)"
+	Then "#widget-8_eu_cookie_law_widget-__i__ > div.widget-top > div.widget-title.ui-draggable-handle > h3" element has value "EU Cookie Law Banner (Jetpack)"
 	Then "#widget-11_facebook-likebox-__i__ > div.widget-top > div.widget-title.ui-draggable-handle > h3" element has value "Facebook Page Plugin (Jetpack)"
 	Then "#widget-12_flickr-__i__ > div.widget-top > div.widget-title.ui-draggable-handle > h3" element has value "Flickr (Jetpack)"
 	# Widget discontinued
