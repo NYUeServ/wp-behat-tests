@@ -36,7 +36,7 @@ Scenario: Smush Pro is installed, network activated, visible on Sidebar and veri
   Then I log out
 
 Scenario: Smush Pro visible in Media Sidebar on testbehat and verify settings on wp-smush-bulk page
-  Given I am logged in as "localbehat"
+  Given I am logged in as "localsuperbehat"
   Then I should visit "testbehat/wp-admin/upload.php"
   # Media > WP Smush
   Then I should see "Smush Pro"
