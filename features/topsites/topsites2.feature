@@ -28,5 +28,5 @@ Feature: Topsites work
   Scenario: gsas-ifa_foundations2015 resolves
     Given I am logged in as "localsuperbehat"
     Then I should visit "gsas-ifa_foundations2015"
-    Then I should see "IFA – Foundations I for MA Students"
+    Then I should see "IFA - Foundations I for MA Students"
     Then I log out
