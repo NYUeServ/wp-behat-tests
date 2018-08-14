@@ -39,7 +39,8 @@ Feature: As a user I should be able to create new site using Site Setup Wizard P
 
     # Step 4
     Then scroll to element with class "ssw-header-wrapper"
-    Then I check "Lock Posts"
+    #Removing Lock Posts function 8/14 as no longer provided to Students
+    #Then I check "Lock Posts"
     Then I check "TumblrWidget"
     Then I press "Finish"
     Then I wait for "Your new site is now ready at" text
@@ -65,7 +66,8 @@ Feature: As a user I should be able to create new site using Site Setup Wizard P
 
     # Check the plugins installed
     Then I should visit "testssw/wp-admin/plugins.php"
-    Then "Lock Posts" plugin is activated
+    #Removing Lock Posts function 8/14 as no longer provided to Students
+    #Then "Lock Posts" plugin is activated
     Then "Tumblr Widget" plugin is activated
 
     # Check site type and current theme
