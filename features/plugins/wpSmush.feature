@@ -41,7 +41,7 @@ Scenario: Smush Pro visible in Media Sidebar on testbehat and verify settings on
   # Media > WP Smush
   Then I should see "Smush Pro"
   Then I should visit "/testbehat/wp-admin/upload.php?page=smush"
-  Then I should see "All attachments have been smushed.  Awesome!"
+  Then I should see "All attachments have been smushed."
   Then "#wp-smush-stats-box > div > h3" element has value "STATS"
   # RE_CHECK IMAGES
   Then "#wp-smush-stats-box > div.wp-smush-container-header.box-title > div > button" element exists
