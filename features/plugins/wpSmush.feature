@@ -45,7 +45,7 @@ Scenario: Smush Pro visible in Media Sidebar on testbehat and verify settings on
   #Then "#wp-smush-stats-box > div > h3" element has value "STATS"
   Then "#wp-smush-settings-box > div > h3" element has value "Settings"
   # RE_CHECK IMAGES
-  Then "#wp-smush-stats-box > div.wp-smush-container-header.box-title > div > button" element exists
+  #Then "#wp-smush-stats-box > div.wp-smush-container-header.box-title > div > button" element exists
   # ENABLE SUPER-SMUSH
   #Then "#wp-smush-stats-box > div.box-content > div.row.super-smush-attachments > span.float-r.wp-smush-stats.wp-smush-lossy-disabled-wrap > a" element exists
   # ENABLE IMAGE RESIZING
