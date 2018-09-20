@@ -111,6 +111,7 @@ class FeatureContext extends MinkContext {
 			$this->iWaitForElement('#wpcontent');
 		} catch ( Exception $e ) {
 			throw new Exception( 'Login failed at ' . $this->getSession()->getCurrentUrl() );
+			echo $passwd;
 		}
 		return;
 	}
