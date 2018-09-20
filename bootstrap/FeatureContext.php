@@ -98,6 +98,7 @@ class FeatureContext extends MinkContext {
 			$this->assertSession()->fieldValueEquals( 'pwd', $passwd );
 		} catch ( Exception $e ) {
 			$element->fillField( 'pwd', $passwd );
+			echo $passwd;
 		}
 		
 		$submit = $element->findButton( 'wp-submit' );
@@ -110,8 +111,8 @@ class FeatureContext extends MinkContext {
 		try {
 			$this->iWaitForElement('#wpcontent');
 		} catch ( Exception $e ) {
-			throw new Exception( 'Login failed at ' . $this->getSession()->getCurrentUrl() );
 			echo $passwd;
+			throw new Exception( 'Login failed at ' . $this->getSession()->getCurrentUrl() );
 		}
 		return;
 	}
