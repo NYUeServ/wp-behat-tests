@@ -87,7 +87,7 @@ class FeatureContext extends MinkContext {
 		$this->iWaitForElement('#user_login');
 
 		$element->fillField( 'log', $username );
-		echo $username
+		echo $username;
 		try {
 			$this->assertSession()->fieldValueEquals( 'log', $username );
 		} catch ( Exception $e ) {
@@ -95,7 +95,7 @@ class FeatureContext extends MinkContext {
 		}
 		
 		$element->fillField( 'pwd', $passwd );
-		echo $passwd
+		echo $passwd;
 		try {
 			$this->assertSession()->fieldValueEquals( 'pwd', $passwd );
 		} catch ( Exception $e ) {
