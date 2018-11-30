@@ -39,7 +39,8 @@ Scenario: Smush Pro visible in Media Sidebar on testbehat and verify settings on
   Given I am logged in as "localsuperbehat"
   Then I should visit "testbehat/wp-admin/upload.php"
   # Media > WP Smush
-  Then I should see "Smush Pro"
+  #Then I should see "Smush Pro"
+  Then I should see "Smush"
   Then I should visit "/testbehat/wp-admin/upload.php?page=smush"
   Then I should see "All attachments have been smushed."
   #Then "#wp-smush-stats-box > div > h3" element has value "STATS"
