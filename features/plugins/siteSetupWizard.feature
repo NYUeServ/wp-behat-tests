@@ -28,10 +28,10 @@ Feature: As a user I should be able to create new site using Site Setup Wizard P
     Then I select "3" from "site_privacy"
     Then I check "ssw-site-terms-input"
     Then I press "ssw_next_btn"
-    Then I wait for "#ssw-themes-adelle" element
+    Then I wait for "#ssw-themes-agency-pro" element
 
     # Step 3
-    Then I select "adelle" from "select_theme"
+    Then I select "agency-pro" from "select_theme"
     # Next Button
     Then I wait for "#ssw-steps > div > div > fieldset > div > div.ssw-proceed.ssw-field > input" element
     Then I click "#ssw-steps > div > div > fieldset > div > div.ssw-proceed.ssw-field > input"
@@ -40,7 +40,7 @@ Feature: As a user I should be able to create new site using Site Setup Wizard P
     # Step 4
     Then scroll to element with class "ssw-header-wrapper"
     #Then I check "Lock Posts"
-    Then I check "TumblrWidget"
+    #Then I check "TumblrWidget"
     Then I press "Finish"
     Then I wait for "Your new site is now ready at" text
     Then I should see "Your new site is now ready at"
@@ -55,7 +55,8 @@ Feature: As a user I should be able to create new site using Site Setup Wizard P
 
     # Check Privacy setting
     Then I should visit "testssw/wp-admin/options-reading.php"
-    Then the "blog-norobots" checkbox should be checked
+    # Theme Settings - Genesis - This theme was removed
+    #Then the "genesis-settings[update]" checkbox should be checked
 
     # Check Site Title and site admin email
     Then I should visit "testssw/wp-admin/options-general.php"
@@ -65,7 +66,7 @@ Feature: As a user I should be able to create new site using Site Setup Wizard P
     # Check the plugins installed
     Then I should visit "testssw/wp-admin/plugins.php"
     #Then "Lock Posts" plugin is activated
-    Then "Tumblr Widget" plugin is activated
+    #Then "Tumblr Widget" plugin is activated
 
     # Check site type and current theme
     Then I should visit "wp-admin/network/sites.php"
@@ -75,7 +76,7 @@ Feature: As a user I should be able to create new site using Site Setup Wizard P
     Then I follow "testssw"
     Then I follow "site-settings"
     Then the "nsd_ssw_site_type" field should contain "Teaching & Learning"
-    Then the "current_theme" field should contain "Adelle"
+    Then the "current_theme" field should contain "Agency Pro"
     # Log out
     Then I log out
 

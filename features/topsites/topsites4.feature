@@ -13,12 +13,12 @@ Feature: Topsites work
     Then I should see "MEDIA AND CULTURAL ANALYSIS"
     Then I log out
 
-  Scenario: mcc_data resolves
-    Given I am logged in as "localsuperbehat"
-    Then I should visit "mcc_data"
-    Then I should see "MCC DATA"
-    Then I should visit "wp-admin"
-    Then I log out
+#  Scenario: mcc_data resolves
+#    Given I am logged in as "localsuperbehat"
+#    Then I should visit "mcc_data"
+#    Then I should see "MCC DATA"
+#    Then I should visit "wp-admin"
+#    Then I log out
 
   Scenario: nyucd18 resolves
     Given I am logged in as "localsuperbehat"

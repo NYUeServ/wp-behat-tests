@@ -6,7 +6,7 @@ Feature: As a admin I should be able to load the Admin Plugins page
   Scenario: Plugins page loads
     Given I am logged in as "localbehat"
     Then I should visit "testbehat/wp-admin/admin.php?page=pretty-plugins.php"
-    Then "div.wrap > h2" element has value "Plugins"
+    Then "div.wrap > h1" element has value "Plugins"
     Then "div#current-theme" element exists
     Then "#plugin-categories-list" element exists
     Then "div#availableplugins" element exists
