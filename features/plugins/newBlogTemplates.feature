@@ -17,7 +17,6 @@ Feature: As a user I should be able to create new site using newBlogTemplate Plu
     Then I fill in "blogname" with "testnewblogtemplate"
     Then I fill in "blog_title" with "TEST SITE FOR NEW BLOG TEMPLATE"
     Then I select "en" from "site-language"
-    Then I click "div#theme-screenshot-plus-wrap-48" if visible
     Then I select "0" from "new_blog_public"
     Then I press "Create Site"
     Then I wait 5 sec
@@ -39,7 +38,7 @@ Feature: As a user I should be able to create new site using newBlogTemplate Plu
     Then I follow "site-settings"
     Then the "blogname" field should contain "TEST SITE FOR NEW BLOG TEMPLATE"
     Then the "admin_email" field should contain "it-wp-admin+localbehat@nyu.edu"
-    Then the "blogdescription" field should contain "TLT_Template3@ NYU site"
+    Then the "blogdescription" field should contain "Just another Web Publishing @ NYU site"
     Then the "WPLANG" field should contain "en_US"
 
   Scenario: Delete the testnewblogtemplate site
