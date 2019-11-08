@@ -17,12 +17,12 @@ Feature: As a user I should be able to create new site using Site Setup Wizard P
     Then I wait for "#ssw-steps > div > div > fieldset > div.ssw-selection > input.ssw-start-btn" element
 
     # Step1
-    Then I press "Teaching & Learning"
+    Then I press "Administrative Department"
     Then I wait for "ssw-admin-email" form element
 
     # Step 2
     Then I fill in "ssw-admin-email" with "tst540@nyu.edu"
-    Then I select "teachinglearning" from "ssw-site-category"
+    Then I select "administrativedepartment" from "ssw-site-category"
     Then I fill in "ssw-site-address" with "testssw"
     Then I fill in "ssw-site-title" with "Test Site Setup Wizard"
     Then I select "3" from "site_privacy"
@@ -75,7 +75,7 @@ Feature: As a user I should be able to create new site using Site Setup Wizard P
     Then I wait for "#the-list > tr > td.blogname.column-blogname.has-row-actions.column-primary > strong > a" element
     Then I follow "testssw"
     Then I follow "site-settings"
-    Then the "nsd_ssw_site_type" field should contain "Teaching & Learning"
+    Then the "nsd_ssw_site_type" field should contain "Administrative Department"
     Then the "current_theme" field should contain "Agency Pro"
     # Log out
     Then I log out
