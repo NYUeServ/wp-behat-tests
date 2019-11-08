@@ -75,7 +75,7 @@ Feature: As a user I should be able to create new site using Site Setup Wizard P
     Then I wait for "#the-list > tr > td.blogname.column-blogname.has-row-actions.column-primary > strong > a" element
     Then I follow "testssw"
     Then I follow "site-settings"
-    Then the "nsd_ssw_site_type" field should contain "Administrative Department"
+    Then the "nsd_ssw_site_type" field should contain "Teaching & Learning"
     Then the "current_theme" field should contain "Agency Pro"
     # Log out
     Then I log out
