@@ -17,7 +17,7 @@ Feature: As a user I should be able to create new site using Site Setup Wizard P
     Then I wait for "#ssw-steps > div > div > fieldset > div.ssw-selection > input.ssw-start-btn" element
 
     # Step1
-    Then I press "Administrative Department"
+    Then I press "Teaching & Learning"
     Then I wait for "ssw-admin-email" form element
 
     # Step 2
