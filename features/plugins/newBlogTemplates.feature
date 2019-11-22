@@ -11,7 +11,8 @@ Feature: As a user I should be able to create new site using newBlogTemplate Plu
   @javascript
   Scenario: Steps to create new site
     Given I am logged in as "localbehat"
-    Then I should visit "wp-signup.php"
+    Then I should visit "select-site-type"
+    Then I follow "create-template"
     Then I should not see "You must first log in to create new site."
     Then I wait 2 sec
     Then I fill in "blogname" with "testnewblogtemplate"
