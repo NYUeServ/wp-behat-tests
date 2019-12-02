@@ -4,23 +4,17 @@ Feature: As a super admin, I verify if Google Analytics is installed, visible on
 Scenario: Verify if Google Analytics is Installed and Network Activated.
   Given I am logged in as "localsuperbehat"
   #Then "Google Analytics" plugin is installed
-  Then "Google Analytics" plugin is installed and network activated
+  Then "Beehive Pro" plugin is installed and network activated
 
-  # Google Analytics is visible on Sidebar and NYU Configuration is set.
+  # Beehive Pro
   Then I should visit "wp-admin/network/settings.php"
-  Then I should see "Google Analytics"
-  Then I should visit "wp-admin/network/settings.php?page=google-analytics"
-  Then I should see "Basic Network Tracking Settings"
+  Then I should see "Beehive Pro"
+  Then I should visit "wp-admin/network/admin.php?page=beehive-settings"
+  Then I should see "Settings"
   # Admin Pages Tracking
-  Then the "track_admin" field should contain "1" 
-  #Domain Mapping - this has been removed by the Plugin Developer in version 3.1.6 
-  #Then the "domain_mapping" field should contain "0"
-  Then I should see "Advanced Network Tracking Settings"
+  Then "#beehive-settings-track-admin" element exists
   #IP Anonymization
-  Then the "anonymize_ip" field should contain "0"
+  Then "#beehive-settings-anonymize" element exists
   #Display Advertising
-  Then the "display_advertising" field should contain "0"
-  #Tracking method
-  #Then the "track_method" field should contain "universal" - removed by Plugin Developer in version 3.1.6
-  Then "#ga-network-settings > form> p > input.button-primary" element exists
+  Then "#beehive-settings-advertising" element exists
   Then I log out
