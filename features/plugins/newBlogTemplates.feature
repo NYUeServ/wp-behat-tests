@@ -18,6 +18,7 @@ Feature: As a user I should be able to create new site using newBlogTemplate Plu
     Then I fill in "blogname" with "testnewblogtemplate"
     Then I fill in "blog_title" with "TEST SITE FOR NEW BLOG TEMPLATE"
     Then I select "en" from "site-language"
+    Then scroll to element with class "submit"
     Then I select "0" from "new_blog_public"
     Then I press "Create Site"
     Then I wait 5 sec
