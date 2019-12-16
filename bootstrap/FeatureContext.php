@@ -76,6 +76,7 @@ class FeatureContext extends MinkContext {
 	 *
 	 */
 	public function loginWithPassword( $username, $passwd ) {
+		$this->getSession()->resizeWindow( 1440, 900, 'current' );
 		$this->getSession()->visit( $this->locatePath( 'wp-login.php' ) );
 		// Log in
 		$element = $this->getSession()->getPage();
