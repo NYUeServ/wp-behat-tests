@@ -16,7 +16,7 @@ Feature: Topsites work
   Scenario: connect resolves
     Given I am logged in as "localsuperbehat"
     Then I should visit "connect"
-    Then I should see "Your Source for IT News at New York University"
+    Then I should see "WHAT'S UP IN TECH AND INNOVATION"
     Then I log out
 
   Scenario: eapcities resolves
