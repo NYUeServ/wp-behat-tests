@@ -14,6 +14,7 @@ Scenario: Smush Pro is installed, network activated, visible on Sidebar and veri
   Then I should see "SETTINGS"
   #Then I should see "Enable Network wide settings"
   #Then I should see "Use network settings for all the sub-sites."
+  Then I should visit "wp-admin/network/admin.php?page=smush&view=settings"
   Then I should see "Color Accessibility"
   #Then the "wp-smush-networkwide" checkbox should be checked
   #Then I should see "Automatically smush my images on upload"
