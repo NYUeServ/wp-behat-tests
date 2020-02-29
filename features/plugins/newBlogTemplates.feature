@@ -1,12 +1,12 @@
 @plugins @networkactivated
 Feature: As a user I should be able to create new site using newBlogTemplate Plugin.
 
-  @javascript
-  Scenario: Verify New Blog Templates is installed and Network Activated
-    Given I am logged in as "localsuperbehat"
-    #Then "New Blog Templates" plugin is installed
-    Then "New Blog Templates" plugin is installed and network activated
-    Then I log out
+#  @javascript
+#  Scenario: Verify New Blog Templates is installed and Network Activated
+#    Given I am logged in as "localsuperbehat"
+#    #Then "New Blog Templates" plugin is installed
+#    Then "New Blog Templates" plugin is installed and network activated
+#    Then I log out
 
   @javascript
   Scenario: Steps to create new site
