@@ -14,7 +14,7 @@ Feature: As a user I should be able to create new site using Site Setup Wizard P
     Then I should visit "create"
     Then I should not see "You must first log in to create new site."
     Then I click "#ssw-steps > div > div > div.ssw-xtra-block > a" if visible
-    Then I wait for "#ssw-steps > div > div > fieldset > div.ssw-selection > input.ssw-start-btn" element
+    Then I wait for "#ssw-steps > div > div > fieldset > div.ssw-selection > input.ssw-btn-primary" element
 
     # Step1
     Then I press "Teaching & Learning"
@@ -44,38 +44,38 @@ Feature: As a user I should be able to create new site using Site Setup Wizard P
     Then I press "Finish"
     Then I wait for "Your new site is now ready at" text
     Then I should see "Your new site is now ready at"
-    Then I should see "/administrativedepartment-testssw"
+    Then I should see "/testssw"
     # Log out
     Then I should visit "wp-admin"
     Then I log out
 
   @verifySite
-  Scenario: Verify if the test site administrativedepartment-testssw was created using the Site Setup Wizard
+  Scenario: Verify if the test site testssw was created using the Site Setup Wizard
     Given I am logged in as "localsuperbehat"
 
     # Check Privacy setting
-    Then I should visit "administrativedepartment-testssw/wp-admin/options-reading.php"
+    Then I should visit "testssw/wp-admin/options-reading.php"
     # Theme Settings - Genesis - This theme was removed
     #Then the "genesis-settings[update]" checkbox should be checked
 
     # Check Site Title and site admin email
-    Then I should visit "administrativedepartment-testssw/wp-admin/options-general.php"
-    Then the "blogname" field should contain "Test Site Setup Wizard"
+    Then I should visit "testssw/wp-admin/options-general.php"
+    Then the "blogname" field should contain "Web Publishing"
     Then the "new_admin_email" field should contain "tst540@nyu.edu"
 
     # Check the plugins installed
-    Then I should visit "administrativedepartment-testssw/wp-admin/plugins.php"
+    Then I should visit "testssw/wp-admin/plugins.php"
     #Then "Lock Posts" plugin is activated
     #Then "Tumblr Widget" plugin is activated
 
     # Check site type and current theme
     Then I should visit "wp-admin/network/sites.php"
-    Then I fill in "site-search-input" with "administrativedepartment-testssw"
+    Then I fill in "site-search-input" with "testssw"
     Then I press "Search Sites"
     Then I wait for "#the-list > tr > td.blogname.column-blogname.has-row-actions.column-primary > strong > a" element
     Then I follow "testssw"
     Then I follow "site-settings"
-    Then the "nsd_ssw_site_type" field should contain "Teaching & Learning"
+    Then the "nsd_ssw_site_type" field should contain "Administrative Department"
     Then the "current_theme" field should contain "Agency Pro"
     # Log out
     Then I log out
@@ -84,7 +84,7 @@ Feature: As a user I should be able to create new site using Site Setup Wizard P
   Scenario: Delete the testssw site
     Given I am logged in as "localsuperbehat"
     Then I should visit "wp-admin/network/sites.php"
-    Then I fill in "site-search-input" with "administrativedepartment-testssw"
+    Then I fill in "site-search-input" with "testssw"
     Then I press "Search Sites"
     Then I wait for "#the-list > tr > td.blogname.column-blogname.has-row-actions.column-primary > div > span.delete > a" element
     Then I click "#the-list > tr > td.blogname.column-blogname.has-row-actions.column-primary"
