@@ -14,7 +14,7 @@ Feature: As a user I should be able to create new site using Site Setup Wizard P
     Then I should visit "create"
     Then I should not see "You must first log in to create new site."
     Then I click "#ssw-steps > div > div > div.ssw-xtra-block > a" if visible
-    Then I wait for "#ssw-steps > div > div > fieldset > div.ssw-selection > input.ssw-btn-primary" element
+    Then I wait for "#ssw-steps > div > div > fieldset > div.ssw-selection > input.ssw-btn-primary.ssw-btn-format" element
 
     # Step1
     Then I press "Teaching & Learning"
@@ -22,7 +22,7 @@ Feature: As a user I should be able to create new site using Site Setup Wizard P
 
     # Step 2
     Then I fill in "ssw-admin-email" with "tst540@nyu.edu"
-    Then I select "administrativedepartment" from "ssw-site-category"
+    Then I select "nocategoryselected" from "ssw-site-category"
     Then I fill in "ssw-site-address" with "testssw"
     Then I fill in "ssw-site-title" with "Test Site Setup Wizard"
     Then I select "3" from "site_privacy"
@@ -60,7 +60,7 @@ Feature: As a user I should be able to create new site using Site Setup Wizard P
 
     # Check Site Title and site admin email
     Then I should visit "testssw/wp-admin/options-general.php"
-    Then the "blogname" field should contain "Web Publishing"
+    Then the "blogname" field should contain "Test Site Setup Wizard"
     Then the "new_admin_email" field should contain "tst540@nyu.edu"
 
     # Check the plugins installed
