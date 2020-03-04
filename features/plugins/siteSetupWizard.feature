@@ -14,7 +14,7 @@ Feature: As a user I should be able to create new site using Site Setup Wizard P
     Then I should visit "create"
     Then I should not see "You must first log in to create new site."
     Then I click "#ssw-steps > div > div > div.ssw-xtra-block > a" if visible
-    Then I wait for "#ssw-steps > div > div > fieldset > div.ssw-selection > input.ssw-btn-primary.ssw-btn-format" element
+    Then I wait for "#ssw-steps > div > div > fieldset > div.ssw-selection > input > input.ssw-btn-primary" element
 
     # Step1
     Then I press "Teaching & Learning"
