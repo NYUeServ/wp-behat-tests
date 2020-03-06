@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-# run_tests.sh -p dev -o "--tags=~@admin"
+# run_tests.sh -p dev -o "--tags=@javascript"
 
 setGlobals() {
     readonly START_SELENIUM_FILE="start_selenium.sh"
@@ -12,7 +12,7 @@ parseArgs() {
     if [ ! $# -ge 1 ]; then
         echo "Please enter the correct arguments"
         #echo "Usage: ./run_tests.sh -p dev -o \"--tags=@admin\""
-        echo "Usage: ./run_tests.sh -p dev -o \"--tags=@createSite\""
+        echo "Usage: ./run_tests.sh -p dev -o \"--tags=@javascript\""
         exit 1
     fi
 

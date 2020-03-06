@@ -15,10 +15,11 @@ Feature: As a user I should be able to create new site using Site Setup Wizard P
     Then I should not see "You must first log in to create new site."
     #Then I click "#ssw-steps > div > div > div.ssw-xtra-block > a" if visible
     Then I click "#ssw-steps > div > div > fieldset > input:nth-child(2)" if visible
-    Then I wait for "#ssw-steps > div > div > fieldset > div.ssw-selection > input.ssw-btn-primary" element
-    Then I wait for "#ssw-steps > div > div > fieldset > input:nth-child(2)" element
-    Then I press "Create a custom site"
-    Then I wait for "#ssw-steps > div > div > fieldset > input:nth-child(1)" element
+    Then I click "#ssw-steps > div > div > fieldset > input.ssw-btn-primary.ssw-btn-site-type.ssw-field--focus-onload" if visible
+    #Then I wait for "#ssw-steps > div > div > fieldset > div.ssw-selection > input.ssw-btn-primary" element
+    #Then I wait for "#ssw-steps > div > div > fieldset > input:nth-child(2)" element
+    #Then I press "Create a custom site"
+    #Then I wait for "#ssw-steps > div > div > fieldset > input:nth-child(1)" element
 
     # Step1
     Then I press "Teaching & Learning"
