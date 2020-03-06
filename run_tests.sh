@@ -11,7 +11,8 @@ setGlobals() {
 parseArgs() {
     if [ ! $# -ge 1 ]; then
         echo "Please enter the correct arguments"
-        echo "Usage: ./run_tests.sh -p dev -o \"--tags=@admin\""
+        #echo "Usage: ./run_tests.sh -p dev -o \"--tags=@admin\""
+        echo "Usage: ./run_tests.sh -p dev -o \"--tags=@createSite\""
         exit 1
     fi
 
