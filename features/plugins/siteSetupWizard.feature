@@ -22,7 +22,7 @@ Feature: As a user I should be able to create new site using Site Setup Wizard P
     #Then I wait for "#ssw-steps > div > div > fieldset > input:nth-child(1)" element
 
     # Step1
-    Then I press "Teaching & Learning"
+    #Then I press "Teaching & Learning"
     Then I wait for "ssw-admin-email" form element
 
     # Step 2
