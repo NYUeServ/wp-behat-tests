@@ -39,7 +39,8 @@ Feature: As a user I should be able to create new site using Site Setup Wizard P
     Then I select "agency-pro" from "select_theme"
     # Next Button
     #Then I wait for "#ssw-steps > div > div > fieldset > div > div.ssw-proceed.ssw-field > input" element
-    Then I click "#ssw-steps > div > div > fieldset > div > div.ssw-proceed.ssw-field > input"
+    #Then I click "#ssw-steps > div > div > fieldset > div > div.ssw-proceed.ssw-field > input"
+    Then I click "#ssw-steps > div > div > div > input"
     Then I wait for "Admin Tools" text
 
     # Step 4
