@@ -326,6 +326,14 @@ class FeatureContext extends MinkContext {
 	}
 
 	/**
+     * @Then /^I scroll to bottom$/
+     */
+	public function iScrollToBottom()
+	{
+		$this->getSession()->executeScript( 'window.scrollTo(0, Math.max(document.documentElement.scrollHeight, document.body.scrollHeight, document.documentElement.clientHeight));' );
+	}
+
+	/**
 	 * Clicks on given element if it is visible in DOM
 	 *
 	 * @Then /^I click "([^"]*)" if visible$/
