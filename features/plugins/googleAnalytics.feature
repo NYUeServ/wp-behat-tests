@@ -11,10 +11,12 @@ Scenario: Verify if Google Analytics is Installed and Network Activated.
   Then I should see "Beehive Pro"
   Then I should visit "wp-admin/network/admin.php?page=beehive-settings"
   Then I should see "Settings"
+  #Permissions Page
+  Then "#beehive-settings-permissions" element exists
   # Admin Pages Tracking
-  Then "#beehive-settings-track-admin" element exists
+  ###Then "#beehive-settings-track-admin" element exists
   #IP Anonymization
-  Then "#beehive-settings-anonymize" element exists
+  ###Then "#beehive-settings-anonymize" element exists
   #Display Advertising
-  Then "#beehive-settings-advertising" element exists
+  ###Then "#beehive-settings-advertising" element exists
   Then I log out
