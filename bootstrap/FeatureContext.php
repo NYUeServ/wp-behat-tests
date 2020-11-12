@@ -155,7 +155,7 @@ class FeatureContext extends MinkContext {
 		# Verify whether the current page is shib login page.
 		if ( stripos( $currentUrl, $shibbolethUrl ) !== false ) {
 			// Verify if we have login form available on the page
-			$this->iWaitForElement('#login');
+			$this->iWaitForElement('#loginForm');
 			$element->fillField( 'netid', $username );
 			try {
 				$this->assertSession()->fieldValueEquals( 'netid', $username );
