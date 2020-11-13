@@ -23,7 +23,7 @@ Feature: As a user I should be able to create new site using newBlogTemplate Plu
     Then I wait 10 sec
     # Fill in site creation form
     Then I select "nocategoryselected" from "site_category"
-    Then I fill in "ssw-admin-email" with "it-wp-admin@nyu.edu"
+    Then I fill in "ssw-admin-email" with "nyu780@nyu.edu"
     Then I fill in "ssw-site-address" with "testnewblogtemplate"
     Then I fill in "ssw-site-title" with "TEST SITE FOR NEW BLOG TEMPLATE"
     Then scroll to element with class "ssw-primary-btn"
@@ -53,7 +53,7 @@ Feature: As a user I should be able to create new site using newBlogTemplate Plu
     Then I follow "testnewblogtemplate"
     Then I follow "site-settings"
     Then the "blogname" field should contain "TEST SITE FOR NEW BLOG TEMPLATE"
-    Then the "admin_email" field should contain "it-wp-admin@nyu.edu"
+    Then the "admin_email" field should contain "nyu780@nyu.edu"
     Then the "blogdescription" field should contain "NYU Classes Supplemental Site"
 
   @newtemplatedelete
