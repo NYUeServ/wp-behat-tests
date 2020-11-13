@@ -156,11 +156,11 @@ class FeatureContext extends MinkContext {
 		if ( stripos( $currentUrl, $shibbolethUrl ) !== false ) {
 			// Verify if we have login form available on the page
 			$this->iWaitForElement('#loginForm');
-			$element->fillField( 'netid', $username );
+			$element->fillField( 'username', $username );
 			try {
-				$this->assertSession()->fieldValueEquals( 'netid', $username );
+				$this->assertSession()->fieldValueEquals( 'username', $username );
 			} catch ( Exception $e ) {
-				$element->fillField( 'netid', $username );
+				$element->fillField( 'username', $username );
 			}
 
 			$element->fillField( 'password', $passwd );
