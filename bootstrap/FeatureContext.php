@@ -326,6 +326,20 @@ class FeatureContext extends MinkContext {
 	}
 
 	/**
+	 * Enables Scroll View To Element with id attribute Functionality
+	 *
+	 * @Then /^scroll to element with id "([^"]*)"$/
+	 */
+	public function scrollToElementWithId( $element ) {
+		try {
+			$js = sprintf( "document.getElementById(\"%s\")[0].scrollIntoView(true);", $element );
+			$this->getSession()->executeScript( $js );
+		} catch ( Exception $e ) {
+			throw new \Exception( "ScrollIntoView failed" );
+		}
+	}
+
+	/**
      * @Then /^I scroll to bottom$/
      */
 	public function iScrollToBottom()
